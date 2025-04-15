@@ -32,21 +32,25 @@
       margin-top: 10px;
     }
 
-    .enter {
-      display: inline-block;
+    .menu {
       margin-top: 40px;
-      padding: 10px 25px;
+    }
+
+    .menu a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
       color: #0d1117;
       background-color: #00FF9C;
       text-decoration: none;
       font-weight: bold;
       border-radius: 4px;
-      animation: blink 1s infinite alternate;
+      transition: background-color 0.3s;
     }
 
-    @keyframes blink {
-      0% {opacity: 1;}
-      100% {opacity: 0.3;}
+    .menu a:hover {
+      background-color: #A855F7;
+      color: #ffffff;
     }
 
     @keyframes glitch {
@@ -72,7 +76,12 @@
   <p>Boxers in the front. Hackers in the back.</p>
   <p>Welcome to the Digital Fight Lab...</p>
 
-  <a class="enter" href="about.html">ENTER THE LAB</a>
+  <div class="menu">
+    <a href="about.html">ABOUT</a>
+    <a href="tools.html">TOOLS</a>
+    <a href="join.html">JOIN</a>
+    <a href="secret.html">SECRET LAB</a>
+  </div>
 
   <footer>
     Stay Dangerous. Stay Learning. © 2025 CyberEyez
@@ -80,5 +89,4 @@
 </body>
 
 </html>
-
 
