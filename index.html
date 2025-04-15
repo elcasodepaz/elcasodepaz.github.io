@@ -1,1 +1,84 @@
-<h1>CyberFight Ops HQ Terminal</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberFight Ops HQ</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #00FF9C;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #A855F7;
+      text-shadow: 0 0 5px #A855F7, 0 0 10px #00FF9C;
+      animation: glitch 1.5s infinite alternate;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .enter {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 25px;
+      color: #0d1117;
+      background-color: #00FF9C;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% {opacity: 1;}
+      100% {opacity: 0.3;}
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CyberFight Ops HQ</h1>
+  <p>Boxers in the front. Hackers in the back.</p>
+  <p>Welcome to the Digital Fight Lab...</p>
+
+  <a class="enter" href="about.html">ENTER THE LAB</a>
+
+  <footer>
+    Stay Dangerous. Stay Learning. © 2025 CyberEyez
+  </footer>
+</body>
+
+</html>
+
+
