@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Threat Feed | CyberFight Ops HQ</title>
+  <title>Threat Feed | CyberFight Ops HQ</title>
   <style>
     body {
       background-color: #0d1117;
@@ -18,16 +18,44 @@
     h1 {
       font-size: 2.4rem;
       color: #A855F7;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       text-shadow: 0 0 8px #A855F7, 0 0 14px #00FF9C;
     }
 
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: none;
-      border-radius: 10px;
+    .section {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: #121417;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 0 15px #00FF9C33;
+      text-align: left;
+    }
+
+    .section h2 {
+      color: #A855F7;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #00FF9C;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #A855F7;
+      text-decoration: underline;
     }
 
     .back {
@@ -44,10 +72,35 @@
 </head>
 
 <body>
-  <h1>🧠 CYBER THREAT FEED</h1>
-  <p>Real-time public threat intelligence updates from CISA and other sources.</p>
+  <h1>🧠 LIVE CYBER THREAT LINKS</h1>
+  <p>Trusted sources to monitor global cyber threats in real-time.</p>
 
-  <iframe src="https://www.cisa.gov/news-events/cybersecurity-advisories" title="CISA Cyber Threat Feed"></iframe>
+  <div class="section">
+    <h2>⚠️ US Government Threat Feeds</h2>
+    <ul>
+      <li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank">CISA Cybersecurity Advisories</a></li>
+      <li><a href="https://www.nist.gov/cyberframework" target="_blank">NIST Cybersecurity Framework</a></li>
+      <li><a href="https://nvd.nist.gov/vuln/data-feeds" target="_blank">NVD Vulnerability Feeds</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>💀 Malware, Ransomware & IOC</h2>
+    <ul>
+      <li><a href="https://www.virustotal.com/" target="_blank">VirusTotal Analyzer</a></li>
+      <li><a href="https://tria.ge/" target="_blank">Hatching Triage Malware Sandbox</a></li>
+      <li><a href="https://otx.alienvault.com/browse/global" target="_blank">AlienVault OTX Indicators</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🌍 Global Threat Intelligence</h2>
+    <ul>
+      <li><a href="https://www.abuseipdb.com/" target="_blank">AbuseIPDB (Live IP Threats)</a></li>
+      <li><a href="https://threatpost.com/" target="_blank">ThreatPost News</a></li>
+      <li><a href="https://cyware.com/cyber-threat-intelligence" target="_blank">Cyware Intelligence Feed</a></li>
+    </ul>
+  </div>
 
   <a class="back" href="index.html">BACK TO TERMINAL</a>
 </body>
