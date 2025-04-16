@@ -18,33 +18,50 @@
       color: #A855F7;
       text-shadow: 0 0 5px #A855F7, 0 0 10px #00FF9C;
       font-size: 2.8rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
     }
 
     .tool {
-      margin-bottom: 40px;
+      background: #121417;
+      border: 1px solid #00FF9C44;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00FF9C33;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #A855F7aa;
     }
 
     .tool-title {
       color: #A855F7;
       font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
     .tool-desc {
       font-size: 1.1rem;
       line-height: 1.6;
-      margin-top: 5px;
+      margin-bottom: 15px;
     }
 
     .tool a {
       display: inline-block;
-      margin-top: 10px;
-      color: #0d1117;
+      padding: 6px 14px;
       background-color: #00FF9C;
-      padding: 6px 15px;
-      border-radius: 4px;
-      font-weight: bold;
+      color: #0d1117;
       text-decoration: none;
-      transition: background-color 0.3s;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
     .tool a:hover {
@@ -53,42 +70,48 @@
     }
 
     .back {
-      margin-top: 50px;
-      display: inline-block;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .back a {
       padding: 10px 20px;
       background: #00FF9C;
       color: #0d1117;
       border-radius: 5px;
       text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
-  <h1>TOOLS LAB</h1>
+  <h1>🧰 TOOLS LAB</h1>
 
-  <div class="tool">
-    <div class="tool-title">wifi-snatcher.py</div>
-    <div class="tool-desc">
-      📡 Scans for nearby WiFi networks and reveals open channels.
+  <div class="grid">
+    <div class="tool">
+      <div class="tool-title">wifi-snatcher.py</div>
+      <div class="tool-desc">
+        📡 Scans for nearby WiFi networks and reveals open channels.
+      </div>
+      <a href="https://github.com/elcasodepaz/wifi-snatcher" target="_blank">[ View Code ]</a>
     </div>
-    <a href="https://github.com/elcasodepaz/wifi-snatcher" target="_blank">[ View Code ]</a>
-  </div>
 
-  <div class="tool">
-    <div class="tool-title">osint-finder.py</div>
-    <div class="tool-desc">
-      🕵️‍♂️ Tracks usernames across multiple social platforms.
+    <div class="tool">
+      <div class="tool-title">osint-finder.py</div>
+      <div class="tool-desc">
+        🕵️‍♂️ Tracks usernames across multiple social platforms.
+      </div>
+      <a href="https://github.com/elcasodepaz/osint-finder" target="_blank">[ View Code ]</a>
     </div>
-    <a href="https://github.com/elcasodepaz/osint-finder" target="_blank">[ View Code ]</a>
-  </div>
 
-  <div class="tool">
-    <div class="tool-title">ip-info.py</div>
-    <div class="tool-desc">
-      🌍 Pulls IP geolocation data, ASN info, and device hints.
+    <div class="tool">
+      <div class="tool-title">ip-info.py</div>
+      <div class="tool-desc">
+        🌍 Pulls IP geolocation data, ASN info, and device hints.
+      </div>
+      <a href="#">[ Coming Soon ]</a>
     </div>
-    <a href="https://github.com/elcasodepaz/ip-info" target="_blank">[ View Code ]</a>
   </div>
 
   <div class="back">
