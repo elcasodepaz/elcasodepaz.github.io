@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Archive | CyberFight Ops HQ</title>
+  <title>About | CyberFight Ops HQ</title>
   <style>
     body {
       background-color: #0d1117;
@@ -15,49 +15,84 @@
       text-align: center;
     }
 
-    h1 {
-      color: #A855F7;
-      font-size: 2.5rem;
-      text-shadow: 0 0 6px #A855F7, 0 0 12px #00FF9C;
-    }
-
-    .blog-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: left;
-    }
-
-    .post {
+    #intro-terminal {
+      font-size: 1.2rem;
+      color: #00FF9C;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
       background-color: #121417;
-      border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00FF9C33;
+      text-align: left;
+      white-space: pre-line;
+      overflow: hidden;
+      height: 200px;
+      animation: glitch-flicker 2s infinite;
+    }
+
+    @keyframes glitch-flicker {
+      0%, 100% { opacity: 1; text-shadow: 1px 0 red, -1px 0 cyan; }
+      20% { opacity: 0.8; text-shadow: -2px 0 red, 2px 0 cyan; }
+      40% { opacity: 1; text-shadow: 1px 0 red, -1px 0 cyan; }
+      60% { opacity: 0.9; text-shadow: -2px 0 red, 2px 0 cyan; }
+      80% { opacity: 1; text-shadow: 1px 0 red, -1px 0 cyan; }
+    }
+
+    h1, h2 {
+      color: #A855F7;
+      text-shadow: 0 0 5px #A855F7, 0 0 10px #00FF9C;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background-color: #121417;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 0 15px #00FF9C33;
     }
 
-    .post h2 {
+    .blog {
+      margin-top: 60px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .post {
+      background: #121417;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 0 12px #00FF9C22;
+    }
+
+    .post h3 {
       color: #A855F7;
       margin-bottom: 10px;
     }
 
     .post p {
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
-    .back {
-      display: inline-block;
+    .back, .archive {
       margin-top: 40px;
+      display: inline-block;
       padding: 10px 20px;
-      background-color: #00FF9C;
+      background: #00FF9C;
       color: #0d1117;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 5px;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    .back:hover {
+    .back:hover, .archive:hover {
       background-color: #A855F7;
       color: white;
     }
@@ -65,31 +100,49 @@
 </head>
 
 <body>
-  <h1>📓 Blog Archive</h1>
+  <h1>🧠 ABOUT ME</h1>
 
-  <div class="blog-container">
-    <div class="post">
-      <h2>🔥 Starting the Hacker Journey</h2>
-      <p>When I first touched Kali Linux, I realized I wasn’t just clicking — I was opening a gate. From firewalls to phishing labs, this is just the beginning...</p>
-    </div>
+  <div id="intro-terminal"></div>
 
-    <div class="post">
-      <h2>🥊 Boxing is More Than a Sport</h2>
-      <p>I’ve seen gloves tell stories code couldn’t. But when you mix strategy from the ring with the mindset of a hacker? You get something unstoppable...</p>
-    </div>
-
-    <div class="post">
-      <h2>📡 From the Border to the Blockchain</h2>
-      <p>I walked across countries. Now I walk through encrypted tunnels. Every key I type is another step forward — from being grounded to being global. This is how real movement works in the cyber realm.</p>
-    </div>
-
-    <div class="post">
-      <h2>💾 Hacking Without the Hoodie</h2>
-      <p>No hoodie. No Hollywood. Just grit, curiosity, and code. I don’t need to look like a villain to play the game. I hack while streaming fights, writing blogs, and building legacy from a terminal.</p>
-    </div>
+  <div class="intro">
+    <p>I was born in Chiraq, bounced to Jersey, lived in Central America, and came back — but not like you think. My family couldn’t fly, so we walked across the border. Real story. Real grit.</p>
+    <p>In Jersey, I got into school and caught a spark for computers. I was 11 when someone gifted me a PC — I tore it apart and learned everything inside. Figured out Ethernet, then WiFi, then chatrooms… then hacked 'em. But while I was leveling up in the digital world, I was also training hands in the physical one. Karate first. That was mid. So I stepped into a gritty boxing gym and never looked back. Started taking down bullies and stacking self-respect. Won some soccer trophies too — but boxing was the only sport I could sit and *feel*.</p>
+    <p>I was a nerd, but I hid it. My friends saw me as an alpha, so I played the part. That led to trouble. But I kept my mind moving. Ended up in construction — made it to Project Manager. Dreamed of being an unlicensed architect. Wanted to build plazas. I was checking goals off. Then life hit back — laid off, deceived, the whole nine. But I ain’t crying over it.</p>
+    <p>Back in juvie, I gave myself the name <strong>El Caso Depaz</strong> — an acronym: <em>“Central America Sangre Original Derrotando Enemigos Preparando Amazonas.”</em></p>
+    <p>Now? I go by <strong>FireFightsTV</strong>. I post boxing content. I study hacking. I build tools. I teach what I learn. From <strong>hard hats to hard drives</strong> — I wear both. This site is my fusion of combat and code. My roots are underground, but now I'm rising through the system, teaching others how to think like hackers and fight like champions.</p>
   </div>
 
-  <a class="back" href="about.html">← BACK TO ABOUT PAGE</a>
+  <div class="blog">
+    <h2>📓 Terminal Logs (Blog)</h2>
+    <div class="post">
+      <h3>🔥 Starting the Hacker Journey</h3>
+      <p>When I first touched Kali Linux, I realized I wasn’t just clicking — I was opening a gate. From firewalls to phishing labs, this is just the beginning...</p>
+    </div>
+    <div class="post">
+      <h3>🥊 Boxing is More Than a Sport</h3>
+      <p>I’ve seen gloves tell stories code couldn’t. But when you mix strategy from the ring with the mindset of a hacker? You get something unstoppable...</p>
+    </div>
+    <a class="archive" href="blog.html">🔗 View Full Blog Archive</a>
+  </div>
+
+  <a class="back" href="index.html">BACK TO TERMINAL</a>
+
+  <script>
+    const text = "Initializing CyberFight Ops HQ...\nLoading Origin Story...\nRendering Fusion: BOXING + HACKING...\n>>> ACCESS GRANTED";
+    let i = 0;
+    const speed = 50;
+    const terminal = document.getElementById("intro-terminal");
+
+    function type() {
+      if (i < text.length) {
+        terminal.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  </script>
 </body>
 
 </html>
+
