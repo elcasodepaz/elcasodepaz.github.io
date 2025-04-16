@@ -19,10 +19,12 @@
       height: 100vh;
       overflow: hidden;
       text-align: center;
+      position: relative;
     }
 
     h1, .subtitle {
       animation: flicker 2s infinite alternate;
+      z-index: 1;
     }
 
     h1 {
@@ -40,6 +42,7 @@
 
     .menu {
       margin-top: 40px;
+      z-index: 1;
     }
 
     .menu a {
@@ -58,6 +61,7 @@
       background-color: #A855F7;
       color: #ffffff;
       transform: scale(1.1);
+      box-shadow: 0 0 10px #A855F7;
     }
 
     footer {
@@ -65,12 +69,26 @@
       bottom: 10px;
       font-size: 0.9rem;
       color: #777;
+      z-index: 1;
     }
 
     @keyframes flicker {
       0% {opacity: 1;}
       50% {opacity: 0.6;}
       100% {opacity: 1;}
+    }
+
+    @keyframes glitch {
+      0% {text-shadow: 1px 0 red, -1px 0 cyan;}
+      20% {text-shadow: -2px 0 red, 2px 0 cyan;}
+      40% {text-shadow: 1px 0 red, -1px 0 cyan;}
+      60% {text-shadow: -2px 0 red, 2px 0 cyan;}
+      80% {text-shadow: 1px 0 red, -1px 0 cyan;}
+      100% {text-shadow: 0 0 0 transparent;}
+    }
+
+    h1:hover {
+      animation: glitch 1s infinite;
     }
   </style>
 </head>
@@ -98,3 +116,4 @@
 </body>
 
 </html>
+
