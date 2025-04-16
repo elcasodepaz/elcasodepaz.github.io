@@ -18,18 +18,24 @@
       align-items: center;
       height: 100vh;
       overflow: hidden;
+      text-align: center;
+    }
+
+    h1, .subtitle {
+      animation: flicker 2s infinite alternate;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #A855F7;
       text-shadow: 0 0 5px #A855F7, 0 0 10px #00FF9C;
-      animation: glitch 1.5s infinite alternate;
+      margin-bottom: 0.5em;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+    .subtitle {
+      font-size: 1.4rem;
+      color: #00FF9C;
+      text-shadow: 0 0 3px #00FF9C;
     }
 
     .menu {
@@ -45,21 +51,13 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 4px;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
     }
 
     .menu a:hover {
       background-color: #A855F7;
       color: #ffffff;
-    }
-
-    @keyframes glitch {
-      0% { transform: translate(0); }
-      20% { transform: translate(-1px, 1px); }
-      40% { transform: translate(1px, -1px); }
-      60% { transform: translate(-1px, -1px); }
-      80% { transform: translate(1px, 1px); }
-      100% { transform: translate(0); }
+      transform: scale(1.1);
     }
 
     footer {
@@ -68,13 +66,21 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    @keyframes flicker {
+      0% {opacity: 1;}
+      50% {opacity: 0.6;}
+      100% {opacity: 1;}
+    }
   </style>
 </head>
 
 <body>
-  <h1>CyberFight Ops HQ</h1>
-  <p>Boxers in the front. Hackers in the back.</p>
-  <p>Welcome to the Digital Fight Lab...</p>
+  <h1>🛠️ CyberFight Ops HQ</h1>
+  <div class="subtitle">
+    🥊 Boxers in the front. Hackers in the back.<br>
+    👁️ Enter the Terminal
+  </div>
 
   <div class="menu">
     <a href="about.html">ABOUT</a>
@@ -89,4 +95,3 @@
 </body>
 
 </html>
-
