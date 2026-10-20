@@ -20,10 +20,20 @@
     nav { display:flex; flex-wrap:wrap; gap:20px; }
     nav a { color:var(--muted); text-decoration:none; font-size:.94rem; }
     nav a:hover { color:var(--accent); }
-    .hero { padding:86px 0 68px; }
+    .hero { padding:76px 0 68px; }
+    .hero-layout { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(270px,.8fr); align-items:center; gap:44px; }
+    .hero-copy { min-width:0; }
+    .hero p { max-width:620px; color:var(--muted); font-size:1.13rem; }
+    .hero-visual { position:relative; min-height:310px; overflow:hidden; border:1px solid #2e4663; border-radius:20px; background:linear-gradient(145deg,rgba(22,42,67,.96),rgba(12,20,36,.96)); box-shadow:0 24px 70px rgba(0,0,0,.24), inset 0 1px rgba(255,255,255,.04); }
+    .hero-visual::before { content:""; position:absolute; inset:0; opacity:.24; background-image:linear-gradient(rgba(133,184,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(133,184,255,.16) 1px,transparent 1px); background-size:28px 28px; mask-image:linear-gradient(135deg,#000,transparent 85%); }
+    .visual-top { position:relative; z-index:1; display:flex; justify-content:space-between; padding:18px 20px 0; color:#91a7c2; font:700 .68rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.12em; }
+    .visual-label { display:flex; align-items:center; gap:8px; color:#64e5b6; }
+    .live-dot { width:7px; height:7px; border-radius:50%; background:#64e5b6; box-shadow:0 0 12px #64e5b6; }
+    .visual-art { position:absolute; inset:48px 10px 10px; width:calc(100% - 20px); height:calc(100% - 58px); }
+    .visual-caption { position:absolute; right:18px; bottom:16px; color:#a8b7cc; font:600 .68rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.08em; }
+    .visual-glow { position:absolute; width:170px; height:170px; left:50%; top:51%; transform:translate(-50%,-50%); border-radius:50%; background:#7159ff; opacity:.16; filter:blur(48px); }
     .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.78rem; font-weight:750; }
     h1 { max-width:780px; margin:14px 0 18px; font-size:clamp(2.35rem,7vw,4.6rem); line-height:1.05; letter-spacing:-.045em; }
-    .hero p { max-width:720px; color:var(--muted); font-size:1.13rem; }
     .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
     .button { display:inline-block; padding:11px 17px; border:1px solid var(--accent); border-radius:8px; color:#06140f; background:var(--accent); text-decoration:none; font-weight:700; }
     .button.secondary { color:var(--text); background:transparent; border-color:var(--line); }
@@ -39,7 +49,8 @@
     .tag { padding:7px 11px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:.9rem; }
     .note { border-left:3px solid var(--accent); padding:4px 0 4px 16px; color:var(--muted); }
     footer { border-top:1px solid var(--line); padding:24px 0 36px; color:var(--muted); font-size:.9rem; }
-    @media (max-width:650px) { .topbar { align-items:flex-start; flex-direction:column; padding:16px 0; gap:10px; } nav { gap:14px; } .hero { padding:62px 0 44px; } .grid { grid-template-columns:1fr; } }
+    @media (max-width:760px) { .hero-layout { grid-template-columns:1fr; gap:30px; } .hero-visual { min-height:260px; } }
+    @media (max-width:650px) { .topbar { align-items:flex-start; flex-direction:column; padding:16px 0; gap:10px; } nav { gap:14px; } .hero { padding:54px 0 44px; } .grid { grid-template-columns:1fr; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
@@ -52,10 +63,36 @@
   </div></header>
   <main id="home">
     <section class="hero wrap">
-      <div class="eyebrow">Learning by building</div>
-      <h1>From hard hats to cybersecurity.</h1>
-      <p>I’m Anthony, a cybersecurity learner building practical skills in Linux, Python, networking, and defensive security. This site tracks the labs and tools I’m working on, including what I tested and what I learned.</p>
-      <div class="actions"><a class="button" href="#projects">Explore my projects</a><a class="button secondary" href="https://github.com/elcasodepaz">View GitHub</a></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">Learning by building</div>
+          <h1>From hard hats to cybersecurity.</h1>
+          <p>I’m Anthony, a cybersecurity learner building practical skills in Linux, Python, networking, and defensive security. This site tracks the labs and tools I’m working on, including what I tested and what I learned.</p>
+          <div class="actions"><a class="button" href="#projects">Explore my projects</a><a class="button secondary" href="https://github.com/elcasodepaz">View GitHub</a></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-glow"></div>
+          <div class="visual-top"><span class="visual-label"><i class="live-dot"></i> FIELD LAB</span><span>01 / BUILD</span></div>
+          <svg class="visual-art" viewBox="0 0 380 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="link" x1="65" y1="205" x2="315" y2="55" gradientUnits="userSpaceOnUse"><stop stop-color="#57E3B0"/><stop offset="1" stop-color="#9877FF"/></linearGradient>
+              <radialGradient id="core"><stop stop-color="#B5A1FF"/><stop offset="1" stop-color="#7458F5"/></radialGradient>
+            </defs>
+            <path d="M78 174L167 120L279 158M167 120L208 54M167 120L296 76M78 174L98 75M208 54L296 76M279 158L296 76" stroke="url(#link)" stroke-width="2" stroke-dasharray="5 7" opacity=".82"/>
+            <circle cx="188" cy="119" r="56" stroke="#8E7AFF" stroke-opacity=".24"/>
+            <circle cx="188" cy="119" r="43" stroke="#8E7AFF" stroke-opacity=".38"/>
+            <circle cx="188" cy="119" r="29" fill="url(#core)"/>
+            <path d="M177 119h22M188 108v22" stroke="#F5F2FF" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="78" cy="174" r="8" fill="#57E3B0"/><circle cx="78" cy="174" r="14" stroke="#57E3B0" stroke-opacity=".35"/>
+            <circle cx="98" cy="75" r="6" fill="#85B8FF"/><circle cx="208" cy="54" r="7" fill="#57E3B0"/>
+            <circle cx="296" cy="76" r="8" fill="#A48AFF"/><circle cx="279" cy="158" r="6" fill="#85B8FF"/>
+            <text x="44" y="207" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.5">PYTHON</text>
+            <text x="187" y="37" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.5">LINUX</text>
+            <text x="277" y="190" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.2">CARDPUTER ADV</text>
+          </svg>
+          <div class="visual-caption">LEARN · TEST · DOCUMENT</div>
+        </div>
+      </div>
     </section>
     <section class="wrap" id="projects">
       <h2>Projects in progress</h2>
