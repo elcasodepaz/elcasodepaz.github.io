@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Anthony's cybersecurity learning portfolio: defensive security projects, Linux and Python labs, and hands-on notes.">
+  <meta name="description" content="Anthony's cybersecurity learning portfolio: penetration testing, purple-team labs, Python projects, and bilingual cybersecurity tools.">
   <meta name="theme-color" content="#0b1220">
   <title>Anthony | Cybersecurity Portfolio</title>
   <style>
@@ -52,6 +52,30 @@
     @media (max-width:760px) { .hero-layout { grid-template-columns:1fr; gap:30px; } .hero-visual { min-height:260px; } }
     @media (max-width:650px) { .topbar { align-items:flex-start; flex-direction:column; padding:16px 0; gap:10px; } nav { gap:14px; } .hero { padding:54px 0 44px; } .grid { grid-template-columns:1fr; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  
+    /* Portfolio visual refresh: clearer hierarchy, richer panels, responsive polish */
+    :root { --bg:#080e1b; --panel:#101b30; --line:#30415d; }
+    body { background:radial-gradient(ellipse at 88% 5%,rgba(115,78,234,.19),transparent 38%),radial-gradient(ellipse at 12% 35%,rgba(28,147,129,.12),transparent 40%),var(--bg); }
+    header { position:sticky; top:0; z-index:20; background:rgba(8,14,27,.88); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+    .brand::before { content:"◈"; color:var(--accent); margin-right:10px; }
+    nav a { transition:color .2s ease; }
+    .hero { padding-top:96px; padding-bottom:88px; }
+    .eyebrow { display:inline-flex; padding:7px 12px; border:1px solid rgba(87,227,176,.3); border-radius:99px; background:rgba(87,227,176,.07); }
+    h1 { background:linear-gradient(120deg,#fff 35%,#a7d9ff 72%,#9c8dff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero-visual { border-color:#405b7c; box-shadow:0 28px 90px rgba(0,0,0,.42),0 0 65px rgba(109,78,236,.12); }
+    .button { transition:transform .2s ease,box-shadow .2s ease; }
+    .button:hover { transform:translateY(-2px); box-shadow:0 8px 26px rgba(87,227,176,.18); }
+    .button.secondary:hover { box-shadow:0 8px 26px rgba(133,184,255,.12); }
+    section[id] { scroll-margin-top:90px; }
+    .card { position:relative; overflow:hidden; background:linear-gradient(145deg,rgba(24,39,65,.96),rgba(13,23,41,.96)); border-color:#30435e; border-radius:18px; padding:26px; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+    .card::before { content:""; position:absolute; inset:0 0 auto; height:2px; background:linear-gradient(90deg,var(--accent),#9276ff); opacity:.7; }
+    .card:hover { transform:translateY(-4px); border-color:#6183a8; box-shadow:0 18px 36px rgba(0,0,0,.22); }
+    .card a { text-decoration:none; font-weight:700; }
+    .card a:hover { text-decoration:underline; }
+    .status { margin-bottom:12px; }
+    .tag { background:rgba(133,184,255,.05); }
+    @media(max-width:650px) { header { position:static; } .hero { padding-top:50px; padding-bottom:50px; } .card { padding:21px; } }
+    @media(prefers-reduced-motion:reduce) { .button,.card,nav a { transition:none; } .button:hover,.card:hover { transform:none; } }
   </style>
 </head>
 <body>
@@ -88,7 +112,7 @@
             <circle cx="296" cy="76" r="8" fill="#A48AFF"/><circle cx="279" cy="158" r="6" fill="#85B8FF"/>
             <text x="44" y="207" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.5">PYTHON</text>
             <text x="187" y="37" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.5">LINUX</text>
-            <text x="277" y="190" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.2">CARDPUTER ADV</text>
+            <text x="277" y="190" fill="#B7C8DC" font-size="10" font-family="monospace" letter-spacing="1.2">PURPLE TEAM</text>
           </svg>
           <div class="visual-caption">LEARN · TEST · DOCUMENT</div>
         </div>
@@ -100,7 +124,7 @@
       <div class="grid">
         <article class="card"><span class="status">Building</span><h3>Domain Posture Check</h3><p>A Python command-line tool that checks one domain’s DNS resolution, HTTPS connection, TLS certificate, and common security headers.</p><a href="https://github.com/elcasodepaz/purple-lab-home/tree/main/domain-posture-check">View project and notes →</a></article>
         <article class="card"><span class="status">In progress</span><h3>Purple Lab Home</h3><p>A place to document controlled security labs, observations, and defensive takeaways.</p><a href="https://github.com/elcasodepaz/purple-lab-home">View repository →</a></article>
-        <article class="card"><span class="status">Learning and documentation</span><h3>Ojo-cibernético</h3><p>A Spanish-language OSINT project I translated and studied. I’m improving the project documentation as I learn.</p><a href="https://github.com/elcasodepaz/Ojo-cibernetico">View repository →</a></article>
+        <article class="card"><span class="status">Learning and documentation</span><h3>Ojo-cibernético</h3><p>A Spanish-language adaptation of an existing OSINT project. I’m documenting my translation work and crediting the original source.</p><a href="https://github.com/elcasodepaz/Ojo-cibernetico">View repository →</a></article>
         <article class="card"><span class="status">Portfolio</span><h3>Python and security labs</h3><p>I’m building one focused project at a time and documenting the goal, setup, results, and defensive takeaways.</p><a href="https://github.com/elcasodepaz">Follow along on GitHub →</a></article>
       </div>
     </section>
